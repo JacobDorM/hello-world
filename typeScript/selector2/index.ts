@@ -1,0 +1,25 @@
+const f = document.getElementById("first");
+const s = document.getElementsByClassName("special")[0];
+const t = document.getElementsByTagName("p")[0];
+const fo = document.querySelector("#first");
+const fi = document.querySelector(".special");
+const st = document.querySelector("p");
+const sp = document.querySelector("h1 + p");
+const se = document.querySelectorAll("#first");
+const set = document.querySelectorAll("p")[0];
+const e = document.querySelectorAll(".special")[0];
+const n = document.querySelector("body p#first");
+const te = document.querySelectorAll("body p#first");
+
+console.log(f);
+console.log(s);
+console.log(t);
+console.log(fo);
+console.log(fi);
+console.log(st);
+console.log(sp);
+console.log(se);
+console.log(set);
+console.log(e);
+console.log(n);
+console.log(te);

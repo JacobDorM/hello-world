@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Circles</title>
+    <script type="text/javascript" src="paper-full.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/paperscript" canvas="myCanvas">
+      //dimensions of grid (e.g. a 5x10 grid)
+      var rows = 10;
+      var cols = 10;
+
+      //center coordinates of any circle being drawn
+      var x;
+      var y;
+
+      //center coordinates of first circle being drawn
+      var xstart = 50;
+      var ystart = 50;
+
+      // distance between center coordinates
+      var xspacing = 100;
+      var yspacing = 100;
+
+      var radius = 10;
+      var fillColor = 'purple';
+
+      // create grid and draw circles
+      for(var row = 1; row <= rows; row++) {
+          y = ystart + (row - 1) * yspacing;
+
+          for(var col = 1; col <= cols; col++) {
+              x = xstart + (col - 1) * xspacing;
+              new Path.Circle(new Point(x, y), radius).fillColor = fillColor;
+          }
+      }
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+
+  <body>
+    <canvas id="myCanvas" resize></canvas>
+  </body>
+</html>
